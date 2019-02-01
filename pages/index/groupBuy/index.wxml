@@ -1,0 +1,22 @@
+<view>
+  <view class="detail">
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+    <view class="info">
+      <view>三打飞机接口萨达是大家看科技啊盛大交付就看</view>
+      <view>10人团 ￥45.00</view>
+    </view>
+  </view>
+  <view class='buyerList'>
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+    <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+  </view>
+  <view class='timer'>
+    <span>还差5人，就差你了哦，赶快加入！</span>
+    <span>剩余 08：12：30结束</span>
+  </view>
+</view>

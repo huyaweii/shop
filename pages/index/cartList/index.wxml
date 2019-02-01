@@ -1,0 +1,57 @@
+<view>
+  <view class='orderList' wx:if="{{list.length > 0}}">
+    <view class='order' wx:for="{{list}}" wx:for-item="order" wx:key="order.id">
+      <i wx:if="{{order.selected}}" class='iconfont icon-selected' bindtap='toggleSecProd' data-id='{{order.product_id}}'/>
+      <i wx:else class='iconfont icon-unselected' bindtap='toggleSecProd' data-id='{{order.product_id}}'/>
+      <span wx:for="{{selected}}" wx:for-item="a">{{a}}</span>
+      <image src="{{order.masterPic}}" />
+      <view class='detail'>
+        <view class='name'>{{order.product_name}}</view>
+        <view class='infoWrapper'>
+          <span class='price'>￥{{(order.product_price) * (order.product_amount)}}</span>
+          <view class='number'>
+            <span 
+              class='sub'
+              bindtap='handleDeleteProduct' 
+              data-id='{{order.product_id}}' 
+              data-amount='{{order.product_amount}}'
+            >
+              -
+            </span>
+            <span class='val'>{{order.product_amount}}</span>
+            <span 
+              class='add' 
+              bindtap='handleAddProduct' 
+              data-id='{{order.product_id}}' 
+              data-amount='{{order.product_amount}}'>
+              +
+            </span>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='settlement'>
+      <view class='allSelected'>
+        <i wx:if="{{selectedAll}}" class='iconfont icon-selected' bindtap='toggleSelectedAll'/>
+        <i wx:else class='iconfont icon-unselected' bindtap='toggleSelectedAll'/>
+        <span style="color: {{selectedAll ? '#f9404a' : '#666'}}">全选</span>
+      </view>
+      <view class='countWrapper'>
+        <view>
+          <span>合计</span>
+          <span class='price'>￥29</span>
+        </view>
+        <view class='btn' bindtap='settle'>去结算</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='emptyWrapper'>
+    <view class='empty'>
+      <span>购物车里啥都没有...</span>
+      <span>快去逛逛吧!</span>
+    </view>
+    <navigator url='/pages/index/index' open-type="switchTab">
+      <view class="btn">去逛逛</view>
+    </navigator>
+  </view>
+</view>

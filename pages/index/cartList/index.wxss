@@ -1,0 +1,129 @@
+page {
+  background: #fff;
+}
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #f5f5f5;
+  margin: 20rpx 30rpx;
+  padding: 20rpx 0rpx;
+  border-radius: 10rpx;
+}
+.order image {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 0rpx 20rpx;
+}
+.order .name{
+  font-size: 32rpx;
+}
+.detail {
+  display: flex;
+  flex: 1;
+  height: 160rpx;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.infoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.infoWrapper .price {
+  color: #f9404a;
+}
+.infoWrapper .number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 5rpx;
+ }
+.infoWrapper .sub, .infoWrapper .add {
+  display: block;
+  text-align: center;
+  line-height: 25rpx;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  border: 1px solid #666;
+  font-size: 30rpx;
+  color: #666;
+}
+.infoWrapper .val {
+  margin: 0rpx 10rpx;
+  color: #333;
+}
+.icon-unselected {
+  margin-left: 5rpx;
+  color: #666;
+}
+.icon-selected {
+  margin-left: 5rpx;
+  color: #fb3145;
+}
+.settlement{
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+  background: #f5f5f5;
+  padding: 0rpx 30rpx;
+  box-sizing: border-box;
+}
+.allSelected {
+  font-size: 32rpx;
+  margin-right: 180rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+.allSelected i {
+  margin-right: 10rpx;
+}
+.countWrapper {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.countWrapper > view  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.countWrapper .price {
+  margin-left: 5rpx;
+  color: #f9404a;
+}
+.countWrapper .btn {
+  background: #fb3145;
+  color: #fff;
+  font-size: 32rpx;
+  padding: 10rpx 30rpx;
+  border-radius: 10rpx;
+}
+
+.emptyWrapper {
+  padding: 0 40rpx;
+  color: #666;
+}
+.emptyWrapper .empty {
+  display: flex;
+  flex-direction: column;
+  font-size: 42rpx;
+  margin-top: 400rpx;
+}
+.emptyWrapper .btn {
+  background: #fb3145;
+  margin-top: 20rpx;
+  width: 200rpx;
+  text-align: center;
+  color: #fff;
+  padding: 16rpx 0rpx;
+  border-radius: 10rpx;
+}

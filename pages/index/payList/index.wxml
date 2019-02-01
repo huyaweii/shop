@@ -1,0 +1,32 @@
+<view>
+  <view class='address'>
+    <view class='info'>
+      <span>胡亚伟 18332537622</span>
+      <span>河北省 廊坊市</span>
+      <span>小庙村</span>
+    </view>
+    <button open-type="openSetting" class='btn'>更改地址</button>
+  </view>
+  <view class='detail'>
+    <span class='title'>商品清单</span>
+    <view class='list'>
+      <view class='item' wx:for="{{list}}" wx:item="{{item}}" wx:key="{{item.product_id}}">
+        <image src="{{item.masterPic}}" />
+        <view class='info'>
+          <span>{{item.product_name}}</span>
+          <span>数量{{item.product_amount}}</span>
+          <span>￥{{item.product_price}}</span>
+        </view>
+      </view>
+    </view>
+    <view class='total'>
+      <span>订单商品总额</span>
+      <span class="price">￥{{total}}</span>
+    </view>
+  </view>
+  <view class='pay'>
+    <view class='btn' bindtap='pay'>
+      确认并支付
+    </view>
+  </view>
+</view>

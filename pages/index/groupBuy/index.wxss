@@ -1,0 +1,39 @@
+.detail {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  padding: 30rpx;
+}
+.detail image {
+  width: 200rpx;
+  height: 200rpx;
+  flex-shrink: 0;
+}
+.detail .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.buyerList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 30rpx;
+}
+.buyerList image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}

@@ -1,0 +1,81 @@
+.address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 50rpx 30rpx;
+  margin: 30rpx;
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+.address .info {
+  display: flex;
+  flex-direction: column;
+}
+.address .btn {
+  background: rgb(56, 59, 70);
+  color: #fff;
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0rpx 20rpx;
+  margin-right: 20rpx;
+  border-radius: 5rpx;
+}
+.detail {
+  margin: 0 30rpx;
+  background: #fff;
+  font-size: 32rpx;
+  border-radius: 20rpx;
+  padding: 30rpx;
+}
+.list {
+  color: #333;
+}
+.list .item {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 0rpx;
+}
+.list image {
+  width: 160rpx;
+  height: 160rpx;
+}
+.list .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20rpx;
+  flex: 1;
+  border-bottom: 1rpx solid #eaeaea;
+}
+.detail .total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.detail .price {
+  color: #f9404a;
+}
+.pay {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 140rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pay .btn {
+  width: 80%;
+  height: 80rpx;
+  background: #fb3145;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}

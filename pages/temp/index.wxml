@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="left_tabbar">
+    <scroll-view scroll-y="true" style="height:{{deviceHeight}}px;" class="left_tabbar_list">
+      <view bindtap="changeTab" data-index="{{index}}" data-name="{{item.tabName}}" class="left_tabbar_item {{activeIndex==index?'active':''}}" wx:for="{{tabs}}">{{item.tabName}}</view>
+    </scroll-view>
+  </view>
+  <view class="right_content">
+    <scroll-view bindscrolltolower="getMore" scroll-y="true" style="height:{{deviceHeight}}px;" class="tab_panel">
+      <view>
+        <navigator wx:for="{{productList}}" wx:for-item="product" wx:key="id" class='product' url='/pages/index/productDetail/index?id={{product.id}}'>
+          <image src="{{product.masterPic}}" />
+          <view class="info">
+            <view class="nameWrapper">
+              <span>{{product.name}}</span>
+              <span>{{product.desc}}</span>
+            </view>
+            <view class="price">{{product.price}}元</view>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+</view>

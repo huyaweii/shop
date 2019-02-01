@@ -1,0 +1,73 @@
+<view>
+  <view class='imageDetail'>
+    <image src="{{productDetail.masterPic}}" />
+  </view>
+  <view class='info'>
+    <span class='name'>{{productDetail.name}}</span>
+    <span class='price'>{{productDetail.price}}元</span>
+    <span class='count'>已售40件</span>
+  </view>
+  <view class='btnWrap'>
+    <view class='iconWrap'>
+      <navigator url='/pages/index/index' open-type="switchTab">
+        <i class='iconfont icon-home' slot="icon" />
+      </navigator>
+      <navigator url='/pages/index/cartList/index'>
+        <i class='iconfont icon-cart' slot="icon" />
+        <view wx:if="{{productDetail.cartCount > 0}}" class="cartCount">{{productDetail.cartCount}}</view>
+      </navigator>
+    </view>
+    <view class='add' bindtap="toggleModal">加入购物车</view>
+    <!-- <view class='add' bindtap="toggleModal">拼团购买</view> -->
+    <view class='purchase'>立即购买</view>
+  </view>
+  <view class='modal' wx:if="{{isVisibleModal}}" bindtap="toggleModal"></view>
+  <view class='cart {{isVisibleModal ? "an" : ""}}' >
+    <view class='empty'>&nbsp;</view>
+    <view class='cartInner'>
+      <view class='detail'>
+        <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+        <view class='price'>
+          <span>{{productDetail.name}}</span>
+          <span>￥{{productDetail.price}}</span>
+        </view>
+      </view>
+      <view class='inventory'>
+        <view class='amount'>
+          <span>购买数量</span>
+          <span>剩余{{productDetail.amount}}件</span>
+        </view>
+        <view class='number'>
+          <span class='sub' bindtap='handleDeleteAmount'>-</span>
+          <span class='val'>{{purchaseAmount}}</span>
+          <span class='add' bindtap='handleAddAmount'>+</span>
+        </view>
+      </view>
+      <view class='btn' bindtap='handleAddToCart'>确定</view>
+      </view>
+  </view>
+  <!-- <view class='cart {{isVisibleModal ? "an" : ""}}' >
+    <view class='empty'>&nbsp;</view>
+    <view class='cartInner'>
+      <view class='detail'>
+        <image src="http://ojs08uydv.bkt.clouddn.com/banner.jpg" />
+        <view class='price'>
+          <span>{{productDetail.name}}</span>
+          <span>￥{{productDetail.price}}</span>
+        </view>
+      </view>
+      <view class='inventory'>
+        <view class='amount'>
+          <span>购买数量</span>
+          <span>剩余{{productDetail.amount}}件</span>
+        </view>
+        <view class='number'>
+          <span class='sub' bindtap='handleDeleteAmount'>-</span>
+          <span class='val'>{{purchaseAmount}}</span>
+          <span class='add' bindtap='handleAddAmount'>+</span>
+        </view>
+      </view>
+      <view class='btn' bindtap='GroupBuy'>确定</view>
+      </view>
+  </view> -->
+</view>
